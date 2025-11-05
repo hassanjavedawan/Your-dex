@@ -16,12 +16,12 @@ const WalletInfo = memo(
   }) => {
     console.log("balance", balance);
     return (
-      <div className="flex items-center space-x-2 bg-[#65ffe9]/20 border border-[#65ffe9]/10 rounded-full px-3 py-1 ">
-        <div className=" text-sm text-[#65ffe9] tracking-wide">
+      <div className="flex items-center space-x-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-3 py-1 ">
+        <div className=" text-sm text-purple-300 tracking-wide">
           {formatWalletAddress(address)}
         </div>
-        <span className="text-sm text-[#65ffe9] tracking-wide">|</span>
-        <div className="text-sm font-semibold text-[#65ffe9] drop-shadow-[0_0_8px_rgba(101,255,255,0.3)]">
+        <span className="text-sm text-purple-300 tracking-wide">|</span>
+        <div className="text-sm font-semibold text-purple-300 drop-shadow-[0_0_8px_rgba(168,85,247,0.3)]">
           {balance
             ? `${Number(balance?.formatted).toFixed(4)} ${balance.symbol}`
             : "0.0000"}
@@ -90,15 +90,15 @@ const Header = () => {
     <header
       className={`sticky top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#01221f]/90 backdrop-blur-md shadow-lg shadow-[#65ffe9]/10"
-          : "bg-[#01221f]"
+          ? "bg-slate-950/90 backdrop-blur-md shadow-lg shadow-purple-500/10"
+          : "bg-slate-950"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2 sm:gap-3">
-            <h1 className="text-2xl sm:text-3xl font-bold text-[#65ffe9] leading-tight">
+            <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent leading-tight">
               Your DEX
             </h1>
           </div>
@@ -109,10 +109,10 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="px-4 py-2 text-white hover:text-[#65ffe9] transition-colors relative group"
+                className="px-4 py-2 text-white hover:text-purple-300 transition-colors relative group"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#65ffe9] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </nav>
@@ -133,32 +133,32 @@ const Header = () => {
 
                 <button
                   onClick={() => disconnect()}
-                  className="group relative inline-flex items-center justify-center px-4 py-2 text-sm text-[#01221f] font-medium overflow-hidden rounded-full bg-gradient-to-r from-[#65ffe9] to-[#65ffe9]/80 hover:from-[#65ffe9]/90 hover:to-[#65ffe9]/70 transition-all duration-300 shadow-md hover:shadow-[#65ffe9]/20"
+                  className="group relative inline-flex items-center justify-center px-4 py-2 text-sm text-white font-medium overflow-hidden rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-md hover:shadow-purple-500/20"
                 >
                   <span className="relative flex items-center gap-1">
                     Disconnect
                     <ChevronRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                   </span>
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#65ffe9]/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out"></span>
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-purple-500/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out"></span>
                 </button>
               </div>
             ) : (
               <button
                 onClick={handleWalletConnect}
-                className="group relative inline-flex items-center justify-center px-4 py-2 text-sm text-[#01221f] font-medium overflow-hidden rounded-full bg-gradient-to-r from-[#65ffe9] to-[#65ffe9]/80 hover:from-[#65ffe9]/90 hover:to-[#65ffe9]/70 transition-all duration-300 shadow-md hover:shadow-[#65ffe9]/20"
+                className="group relative inline-flex items-center justify-center px-4 py-2 text-sm text-white font-medium overflow-hidden rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-md hover:shadow-purple-500/20"
               >
                 <span className="relative flex items-center gap-1">
                   Connect Wallet
                   <ChevronRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                 </span>
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#65ffe9]/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out"></span>
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-purple-500/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out"></span>
               </button>
             )}
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white hover:text-[#65ffe9] transition-colors"
+            className="lg:hidden text-white hover:text-purple-300 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -171,13 +171,13 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 py-4 border-t border-[#65ffe9]/20 animate-fadeIn bg-[#01221f]">
+          <div className="lg:hidden mt-4 py-4 border-t border-purple-500/20 animate-fadeIn bg-slate-950">
             <nav className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="px-2 py-2 text-white hover:text-[#65ffe9] transition-colors flex items-center justify-between"
+                  className="px-2 py-2 text-white hover:text-purple-300 transition-colors flex items-center justify-between"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -196,7 +196,7 @@ const Header = () => {
               {isConnected ? (
                 <button
                   onClick={() => disconnect()}
-                  className="mt-2 w-full group relative inline-flex items-center justify-center px-4 py-2 text-sm text-[#01221f] font-medium overflow-hidden rounded-full bg-gradient-to-r from-[#65ffe9] to-[#65ffe9]/80 hover:from-[#65ffe9]/90 hover:to-[#65ffe9]/70 transition-all duration-300 shadow-md hover:shadow-[#65ffe9]/20"
+                  className="mt-2 w-full group relative inline-flex items-center justify-center px-4 py-2 text-sm text-white font-medium overflow-hidden rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-md hover:shadow-purple-500/20"
                 >
                   <span className="relative flex items-center justify-center gap-1 w-full">
                     Disconnect
@@ -206,7 +206,7 @@ const Header = () => {
               ) : (
                 <button
                   onClick={handleWalletConnect}
-                  className="mt-2 w-full group relative inline-flex items-center justify-center px-4 py-2 text-sm text-[#01221f] font-medium overflow-hidden rounded-full bg-gradient-to-r from-[#65ffe9] to-[#65ffe9]/80 hover:from-[#65ffe9]/90 hover:to-[#65ffe9]/70 transition-all duration-300 shadow-md hover:shadow-[#65ffe9]/20"
+                  className="mt-2 w-full group relative inline-flex items-center justify-center px-4 py-2 text-sm text-white font-medium overflow-hidden rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-md hover:shadow-purple-500/20"
                 >
                   <span className="relative flex items-center justify-center gap-1 w-full">
                     Connect Wallet
@@ -220,7 +220,7 @@ const Header = () => {
       </div>
 
       {/* Decorative element */}
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#65ffe9]/30 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent"></div>
     </header>
   );
 };

@@ -548,15 +548,15 @@ const StakingPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#01221f] text-white relative overflow-hidden">
+    <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
       {/* Futuristic Background Grid */}
       <div className="absolute inset-0 opacity-20">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage: `
-            linear-gradient(rgba(101, 255, 233, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(101, 255, 233, 0.1) 1px, transparent 1px)
+            linear-gradient(rgba(168, 85, 247, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px)
           `,
             backgroundSize: "50px 50px",
           }}
@@ -566,7 +566,7 @@ const StakingPage = () => {
       {/* Animated Circuit Lines */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#65ffe9] to-transparent"
+          className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"
           animate={{ x: ["-100%", "100%"] }}
           transition={{
             duration: 8,
@@ -575,7 +575,7 @@ const StakingPage = () => {
           }}
         />
         <motion.div
-          className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#65ffe9] to-transparent"
+          className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"
           animate={{ x: ["100%", "-100%"] }}
           transition={{
             duration: 10,
@@ -584,7 +584,7 @@ const StakingPage = () => {
           }}
         />
         <motion.div
-          className="absolute left-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-[#65ffe9] to-transparent"
+          className="absolute left-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-purple-500 to-transparent"
           animate={{ y: ["-100%", "100%"] }}
           transition={{
             duration: 12,
@@ -593,7 +593,7 @@ const StakingPage = () => {
           }}
         />
         <motion.div
-          className="absolute right-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-[#65ffe9] to-transparent"
+          className="absolute right-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-purple-500 to-transparent"
           animate={{ y: ["100%", "-100%"] }}
           transition={{
             duration: 9,
@@ -606,7 +606,7 @@ const StakingPage = () => {
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
-          className="absolute top-20 left-20 w-16 h-16 border border-[#65ffe9]/30"
+          className="absolute top-20 left-20 w-16 h-16 border border-purple-500/30"
           style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
           animate={{ rotate: 360 }}
           transition={{
@@ -616,7 +616,7 @@ const StakingPage = () => {
           }}
         />
         <motion.div
-          className="absolute top-40 right-32 w-12 h-12 border border-[#65ffe9]/20"
+          className="absolute top-40 right-32 w-12 h-12 border border-purple-500/20"
           style={{
             clipPath:
               "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
@@ -629,7 +629,7 @@ const StakingPage = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-32 left-1/3 w-20 h-20 border border-[#65ffe9]/15"
+          className="absolute bottom-32 left-1/3 w-20 h-20 border border-purple-500/15"
           style={{
             clipPath:
               "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
@@ -649,10 +649,10 @@ const StakingPage = () => {
           <motion.div
             className={`fixed top-8 right-8 z-50 backdrop-blur-md border ${
               toastType === "success"
-                ? "bg-black/40 border-[#65ffe9]/50 text-[#65ffe9]"
+                ? "bg-black/40 border-purple-500/50 text-purple-300"
                 : toastType === "error"
                 ? "bg-black/40 border-red-400/50 text-red-300"
-                : "bg-black/40 border-[#65ffe9]/50 text-[#65ffe9]"
+                : "bg-black/40 border-purple-500/50 text-purple-300"
             }`}
             style={{
               clipPath:
@@ -665,13 +665,13 @@ const StakingPage = () => {
             <div className="p-6 pr-12 relative">
               <div className="flex items-center">
                 {toastType === "success" && (
-                  <FaCheckCircle className="mr-3 text-[#65ffe9]" />
+                  <FaCheckCircle className="mr-3 text-purple-300" />
                 )}
                 {toastType === "error" && (
                   <FaExclamationTriangle className="mr-3 text-red-400" />
                 )}
                 {toastType === "info" && (
-                  <FiInfo className="mr-3 text-[#65ffe9]" />
+                  <FiInfo className="mr-3 text-purple-300" />
                 )}
                 <span className="font-medium">{toastMessage}</span>
               </div>
@@ -696,15 +696,15 @@ const StakingPage = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-[#65ffe9]/20 blur-xl"></div>
+              <div className="absolute inset-0 bg-purple-500/20 blur-xl"></div>
               <div
-                className="relative bg-black/60 border border-[#65ffe9]/50 px-8 py-4 backdrop-blur-md"
+                className="relative bg-black/60 border border-purple-500/50 px-8 py-4 backdrop-blur-md"
                 style={{
                   clipPath:
                     "polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%)",
                 }}
               >
-                <span className="text-[#65ffe9] font-mono text-sm tracking-wider">
+                <span className="text-purple-300 font-mono text-sm tracking-wider">
                   YOURDEX PROTOCOL
                 </span>
               </div>
@@ -718,10 +718,10 @@ const StakingPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             STAKE{" "}
-            <span className="text-[#65ffe9] relative">
+            <span className="text-purple-300 relative">
               YOURDEX
               <motion.div
-                className="absolute -inset-2 bg-[#65ffe9]/10 blur-lg"
+                className="absolute -inset-2 bg-purple-500/10 blur-lg"
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
               />
@@ -746,25 +746,25 @@ const StakingPage = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <div className="absolute inset-0 bg-[#65ffe9]/10 blur-xl group-hover:bg-[#65ffe9]/20 transition-all duration-500"></div>
+            <div className="absolute inset-0 bg-purple-500/10 blur-xl group-hover:bg-purple-500/20 transition-all duration-500"></div>
             <div
-              className="relative bg-black/60 border border-[#65ffe9]/50 p-8 backdrop-blur-md group-hover:border-[#65ffe9]/80 transition-all duration-500"
+              className="relative bg-black/60 border border-purple-500/50 p-8 backdrop-blur-md group-hover:border-purple-500/80 transition-all duration-500"
               style={{
                 clipPath:
                   "polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px))",
               }}
             >
               <div className="flex items-center mb-4">
-                <BiCube className="text-[#65ffe9] text-2xl mr-3" />
+                <BiCube className="text-purple-300 text-2xl mr-3" />
                 <span className="text-gray-400 font-mono text-sm tracking-wider">
                   TOTAL VALUE LOCKED
                 </span>
               </div>
               <div className="text-3xl font-bold text-white font-mono">
-                <span className="text-[#65ffe9]">
+                <span className="text-purple-300">
                   {Number.parseFloat(totalValueLocked).toLocaleString()}
                 </span>
-                <span className="text-sm text-[#65ffe9]/70 ml-2">YOURDEX</span>
+                <span className="text-sm text-purple-300/70 ml-2">YOURDEX</span>
               </div>
             </div>
           </motion.div>
@@ -775,25 +775,25 @@ const StakingPage = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <div className="absolute inset-0 bg-[#65ffe9]/10 blur-xl group-hover:bg-[#65ffe9]/20 transition-all duration-500"></div>
+            <div className="absolute inset-0 bg-purple-500/10 blur-xl group-hover:bg-purple-500/20 transition-all duration-500"></div>
             <div
-              className="relative bg-black/60 border border-[#65ffe9]/50 p-8 backdrop-blur-md group-hover:border-[#65ffe9]/80 transition-all duration-500"
+              className="relative bg-black/60 border border-purple-500/50 p-8 backdrop-blur-md group-hover:border-purple-500/80 transition-all duration-500"
               style={{
                 clipPath:
                   "polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px)",
               }}
             >
               <div className="flex items-center mb-4">
-                <FaChartLine className="text-[#65ffe9] text-2xl mr-3" />
+                <FaChartLine className="text-purple-300 text-2xl mr-3" />
                 <span className="text-gray-400 font-mono text-sm tracking-wider">
                   APY RANGE
                 </span>
               </div>
-              <div className="text-3xl font-bold text-[#65ffe9] font-mono flex items-center">
+              <div className="text-3xl font-bold text-purple-300 font-mono flex items-center">
                 {durationOptions[0].apy.replace("%", "")}-
                 {durationOptions[durationOptions.length - 1].apy}
                 <motion.div
-                  className="ml-3 text-[#65ffe9]/70"
+                  className="ml-3 text-purple-300/70"
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                 >
@@ -807,12 +807,12 @@ const StakingPage = () => {
         {/* Tab Navigation */}
         <div className="flex justify-center mb-12">
           <div className="relative">
-            <div className="absolute inset-0 bg-[#65ffe9]/10 blur-lg"></div>
-            <div className="relative bg-black/60 border border-[#65ffe9]/50 backdrop-blur-md flex">
+            <div className="absolute inset-0 bg-purple-500/10 blur-lg"></div>
+            <div className="relative bg-black/60 border border-purple-500/50 backdrop-blur-md flex">
               <button
                 className={`px-12 py-4 font-mono text-sm tracking-wider transition-all duration-300 relative ${
                   activeTab === "stake"
-                    ? "bg-[#65ffe9] text-black"
+                    ? "bg-purple-500 text-white"
                     : "text-gray-400 hover:text-white"
                 }`}
                 onClick={() => setActiveTab("stake")}
@@ -828,7 +828,7 @@ const StakingPage = () => {
               <button
                 className={`px-12 py-4 font-mono text-sm tracking-wider transition-all duration-300 relative ${
                   activeTab === "rewards"
-                    ? "bg-[#65ffe9] text-black"
+                    ? "bg-purple-500 text-white"
                     : "text-gray-400 hover:text-white"
                 }`}
                 onClick={() => setActiveTab("rewards")}
@@ -853,21 +853,21 @@ const StakingPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            <div className="absolute inset-0 bg-[#65ffe9]/5 blur-2xl"></div>
+            <div className="absolute inset-0 bg-purple-500/5 blur-2xl"></div>
             <div
-              className="relative bg-black/40 border border-[#65ffe9]/50 backdrop-blur-md overflow-hidden"
+              className="relative bg-black/40 border border-purple-500/50 backdrop-blur-md overflow-hidden"
               style={{
                 clipPath:
                   "polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 40px 100%, 0 calc(100% - 40px))",
               }}
             >
               {/* Header Accent */}
-              <div className="h-2 w-full bg-gradient-to-r from-[#65ffe9] via-blue-500 to-[#65ffe9]"></div>
+              <div className="h-2 w-full bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500"></div>
 
               {activeTab === "stake" ? (
                 <div className="p-12">
                   <div className="flex items-center mb-8">
-                    <BiCube className="text-[#65ffe9] mr-4 text-3xl" />
+                    <BiCube className="text-purple-300 mr-4 text-3xl" />
                     <h2 className="text-2xl font-bold text-white font-mono tracking-wider">
                       STAKE YOUR TOKENS
                     </h2>
@@ -879,7 +879,7 @@ const StakingPage = () => {
                       <div>
                         <div className="mb-8">
                           <div
-                            className="bg-black/60 border border-[#65ffe9]/30 p-6 backdrop-blur-md mb-6"
+                            className="bg-black/60 border border-purple-500/30 p-6 backdrop-blur-md mb-6"
                             style={{
                               clipPath:
                                 "polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%)",
@@ -900,7 +900,7 @@ const StakingPage = () => {
                               <span className="text-gray-400 font-mono text-sm">
                                 STAKING APY
                               </span>
-                              <span className="font-bold text-[#65ffe9] font-mono">
+                              <span className="font-bold text-purple-300 font-mono">
                                 {calculateAPY()}
                               </span>
                             </div>
@@ -927,7 +927,7 @@ const StakingPage = () => {
                             </label>
                           </div>
                           <div
-                            className="bg-black/60 border border-[#65ffe9]/30 p-8 backdrop-blur-md"
+                            className="bg-black/60 border border-purple-500/30 p-8 backdrop-blur-md"
                             style={{
                               clipPath:
                                 "polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px))",
@@ -939,8 +939,8 @@ const StakingPage = () => {
                                   key={option.value}
                                   className={`cursor-pointer p-6 transition-all duration-300 text-center relative group ${
                                     stakeDuration === option.value
-                                      ? "bg-[#65ffe9]/20 border border-[#65ffe9]/50"
-                                      : "bg-black/40 border border-gray-700/50 hover:border-[#65ffe9]/30"
+                                      ? "bg-purple-500/20 border border-purple-500/50"
+                                      : "bg-black/40 border border-gray-700/50 hover:border-purple-500/30"
                                   }`}
                                   style={{
                                     clipPath:
@@ -956,15 +956,15 @@ const StakingPage = () => {
                                   <div
                                     className={`text-sm font-bold font-mono ${
                                       stakeDuration === option.value
-                                        ? "text-[#65ffe9]"
-                                        : "text-[#65ffe9]/80"
+                                        ? "text-purple-300"
+                                        : "text-purple-300/80"
                                     }`}
                                   >
                                     {option.apy} APY
                                   </div>
                                   {stakeDuration === option.value && (
                                     <motion.div
-                                      className="absolute bottom-0 left-0 w-full h-1 bg-[#65ffe9]"
+                                      className="absolute bottom-0 left-0 w-full h-1 bg-purple-500"
                                       layoutId="activeTab"
                                     />
                                   )}
@@ -988,7 +988,7 @@ const StakingPage = () => {
                               onChange={(e) => setStakeAmount(e.target.value)}
                               placeholder="0.0"
                               step="0.01"
-                              className="w-full px-6 py-6 bg-black/60 text-white border border-[#65ffe9]/30 focus:outline-none focus:border-[#65ffe9] backdrop-blur-md transition-all duration-300 font-mono text-lg"
+                              className="w-full px-6 py-6 bg-black/60 text-white border border-purple-500/30 focus:outline-none focus:border-purple-500 backdrop-blur-md transition-all duration-300 font-mono text-lg"
                               style={{
                                 clipPath:
                                   "polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%)",
@@ -1004,7 +1004,7 @@ const StakingPage = () => {
                                 onClick={() =>
                                   setStakeAmount(balanceData?.formatted || "0")
                                 }
-                                className="px-3 py-1 text-xs bg-[#65ffe9]/20 text-[#65ffe9] hover:bg-[#65ffe9]/30 transition-colors font-mono"
+                                className="px-3 py-1 text-xs bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors font-mono"
                                 style={{
                                   clipPath:
                                     "polygon(5px 0, 100% 0, calc(100% - 5px) 100%, 0 100%)",
@@ -1018,14 +1018,14 @@ const StakingPage = () => {
 
                         <div className="mb-8">
                           <div
-                            className="p-6 bg-[#65ffe9]/5 border border-[#65ffe9]/20 backdrop-blur-md"
+                            className="p-6 bg-purple-500/5 border border-purple-500/20 backdrop-blur-md"
                             style={{
                               clipPath:
                                 "polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 25px 100%, 0 calc(100% - 25px))",
                             }}
                           >
                             <div className="flex items-center mb-3">
-                              <FaShieldAlt className="text-[#65ffe9] mr-3" />
+                              <FaShieldAlt className="text-purple-300 mr-3" />
                               <span className="font-bold text-white font-mono text-sm">
                                 STAKING BENEFITS
                               </span>
@@ -1039,7 +1039,7 @@ const StakingPage = () => {
 
                         {/* Stake Button */}
                         <div className="relative group">
-                          <div className="absolute inset-0 bg-[#65ffe9]/20  blur-xl group-hover:bg-[#65ffe9]/40 transition-all duration-500 "></div>
+                          <div className="absolute inset-0 bg-purple-500/20  blur-xl group-hover:bg-purple-500/40 transition-all duration-500 "></div>
                           <motion.button
                             type="submit"
                             disabled={isStaking}
@@ -1047,7 +1047,7 @@ const StakingPage = () => {
                             className={`w-full py-6 font-bold relative overflow-hidden font-mono text-lg tracking-wider disabled:opacity-50 disabled:cursor-not-allowed ${
                               isStaking
                                 ? "bg-gray-700 text-gray-400 cursor-not-allowed"
-                                : "bg-gradient-to-r from-[#65ffe9] to-blue-500 text-black hover:from-blue-500 hover:to-[#65ffe9]"
+                                : "bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-blue-500 hover:to-purple-500"
                             } transition-all duration-300`}
                             style={{
                               clipPath:
@@ -1073,7 +1073,7 @@ const StakingPage = () => {
                               <span className="flex items-center justify-center relative z-10">
                                 STAKE YOURDEX
                                 <span
-                                  className="ml-4 text-sm bg-black/20 px-3 py-1 border border-[#65ffe9]/30"
+                                  className="ml-4 text-sm bg-black/20 px-3 py-1 border border-purple-500/30"
                                   style={{
                                     clipPath:
                                       "polygon(5px 0, 100% 0, calc(100% - 5px) 100%, 0 100%)",
@@ -1092,7 +1092,7 @@ const StakingPage = () => {
               ) : (
                 <div className="p-12">
                   <div className="flex items-center mb-8">
-                    <MdOutlineWaves className="text-[#65ffe9] mr-4 text-3xl" />
+                    <MdOutlineWaves className="text-purple-300 mr-4 text-3xl" />
                     <h2 className="text-2xl font-bold text-white font-mono tracking-wider">
                       YOUR REWARDS
                     </h2>
@@ -1100,7 +1100,7 @@ const StakingPage = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                     <div
-                      className="bg-black/60 border border-[#65ffe9]/30 p-8 backdrop-blur-md text-center"
+                      className="bg-black/60 border border-purple-500/30 p-8 backdrop-blur-md text-center"
                       style={{
                         clipPath:
                           "polygon(25px 0, 100% 0, calc(100% - 25px) 100%, 0 100%)",
@@ -1111,11 +1111,11 @@ const StakingPage = () => {
                       </div>
                       <div className="text-3xl font-bold text-white font-mono ">
                         {Number.parseFloat(totalUserStaked).toFixed(2)}{" "}
-                        <span className="text-[#65ffe9]">Your Dex</span>
+                        <span className="text-purple-300">Your Dex</span>
                       </div>
                     </div>
                     <div
-                      className="bg-black/60 border border-[#65ffe9]/30 p-8 backdrop-blur-md text-center"
+                      className="bg-black/60 border border-purple-500/30 p-8 backdrop-blur-md text-center"
                       style={{
                         clipPath:
                           "polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%)",
@@ -1124,7 +1124,7 @@ const StakingPage = () => {
                       <div className="text-gray-400 font-mono text-sm mb-2">
                         REWARDS EARNED
                       </div>
-                      <div className="text-3xl font-bold text-[#65ffe9] font-mono">
+                      <div className="text-3xl font-bold text-purple-300 font-mono">
                         {Number.parseFloat(totalUserRewards).toFixed(2)} Your
                         Dex
                       </div>
@@ -1136,7 +1136,7 @@ const StakingPage = () => {
                       {userStakes.map((stake, index) => (
                         <div
                           key={`${stake.duration}-${index}`}
-                          className="bg-black/60 border border-[#65ffe9]/30 p-8 backdrop-blur-md"
+                          className="bg-black/60 border border-purple-500/30 p-8 backdrop-blur-md"
                           style={{
                             clipPath:
                               "polygon(30px 0, 100% 0, calc(100% - 30px) 100%, 0 100%)",
@@ -1145,13 +1145,13 @@ const StakingPage = () => {
                           <div className="flex justify-between items-center mb-6">
                             <div className="flex items-center">
                               <div
-                                className="w-16 h-16 border border-[#65ffe9]/50 flex items-center justify-center mr-4"
+                                className="w-16 h-16 border border-purple-500/50 flex items-center justify-center mr-4"
                                 style={{
                                   clipPath:
                                     "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
                                 }}
                               >
-                                <FaLock className="text-[#65ffe9] text-xl" />
+                                <FaLock className="text-purple-300 text-xl" />
                               </div>
                               <div>
                                 <div className="font-bold text-white font-mono text-lg">
@@ -1171,7 +1171,7 @@ const StakingPage = () => {
                               </div>
                               <div className="text-sm text-gray-400 font-mono">
                                 {stake.canUnstake ? (
-                                  <span className="text-[#65ffe9]">
+                                  <span className="text-purple-300">
                                     READY TO UNSTAKE
                                   </span>
                                 ) : (
@@ -1187,7 +1187,7 @@ const StakingPage = () => {
                           </div>
 
                           <div
-                            className="bg-black/40 border border-[#65ffe9]/20 p-4 mb-6"
+                            className="bg-black/40 border border-purple-500/20 p-4 mb-6"
                             style={{
                               clipPath:
                                 "polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%)",
@@ -1197,7 +1197,7 @@ const StakingPage = () => {
                               <span className="text-gray-400 font-mono text-sm">
                                 PENDING REWARDS
                               </span>
-                              <span className="font-bold text-[#65ffe9] font-mono">
+                              <span className="font-bold text-purple-300 font-mono">
                                 {Number.parseFloat(
                                   stake.pendingRewardsFormatted
                                 ).toFixed(2)}{" "}
@@ -1211,7 +1211,7 @@ const StakingPage = () => {
                               className={`py-4 px-6 font-mono text-sm tracking-wider relative overflow-hidden disabled:cursor-not-allowed disabled:opacity-50 ${
                                 timeRemaining[index]?.totalSeconds > 0
                                   ? "bg-gray-700/80 text-gray-400 cursor-not-allowed"
-                                  : "bg-[#65ffe9]/20 text-[#65ffe9] hover:bg-[#65ffe9]/30"
+                                  : "bg-purple-500/20 text-purple-300 hover:bg-purple-500/30"
                               }`}
                               style={{
                                 clipPath:
@@ -1291,7 +1291,7 @@ const StakingPage = () => {
                     </div>
                   ) : (
                     <div
-                      className="bg-black/60 border border-[#65ffe9]/30 p-12 backdrop-blur-md text-center"
+                      className="bg-black/60 border border-purple-500/30 p-12 backdrop-blur-md text-center"
                       style={{
                         clipPath:
                           "polygon(40px 0, 100% 0, calc(100% - 40px) 100%, 0 100%)",
@@ -1302,7 +1302,7 @@ const StakingPage = () => {
                       </div>
                       <button
                         onClick={() => setActiveTab("stake")}
-                        className="text-[#65ffe9] font-mono text-sm hover:underline"
+                        className="text-purple-300 font-mono text-sm hover:underline"
                       >
                         STAKE YOUR TOKENS TO START EARNING REWARDS
                       </button>
@@ -1341,22 +1341,22 @@ const StakingPage = () => {
               transition={{ duration: 0.8, delay: 1.2 + index * 0.2 }}
               whileHover={{ y: -10 }}
             >
-              <div className="absolute inset-0 bg-[#65ffe9]/5 blur-xl group-hover:bg-[#65ffe9]/10 transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-purple-500/5 blur-xl group-hover:bg-purple-500/10 transition-all duration-500"></div>
               <div
-                className="relative bg-black/40 border border-[#65ffe9]/30 p-8 backdrop-blur-md group-hover:border-[#65ffe9]/50 transition-all duration-500"
+                className="relative bg-black/40 border border-purple-500/30 p-8 backdrop-blur-md group-hover:border-purple-500/50 transition-all duration-500"
                 style={{
                   clipPath:
                     "polygon(25px 0, 100% 0, calc(100% - 25px) 100%, 0 100%)",
                 }}
               >
                 <div
-                  className="w-16 h-16 border border-[#65ffe9]/50 flex items-center justify-center mb-6 mx-auto"
+                  className="w-16 h-16 border border-purple-500/50 flex items-center justify-center mb-6 mx-auto"
                   style={{
                     clipPath:
                       "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
                   }}
                 >
-                  <benefit.icon className="text-[#65ffe9] text-2xl" />
+                  <benefit.icon className="text-purple-300 text-2xl" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-4 font-mono text-center">
                   {benefit.title}

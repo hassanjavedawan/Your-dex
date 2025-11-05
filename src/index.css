@@ -9,8 +9,8 @@
   width: 0px;
 }
 ::selection {
-  background-color: #65ffe9;
-  color: #01221f;
+  background-color: #a855f7;
+  color: #f8fafc;
 }
 /*  hide number input spinner */
 input::-webkit-inner-spin-button,

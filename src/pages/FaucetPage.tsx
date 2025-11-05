@@ -307,15 +307,15 @@ export default function FaucetPage() {
   );
 
   return (
-    <div className="min-h-screen bg-[#01221f] text-white relative overflow-hidden">
+    <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
       {/* Futuristic Background Grid */}
       <div className="absolute inset-0 opacity-20">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage: `
-            linear-gradient(rgba(101, 255, 233, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(101, 255, 233, 0.1) 1px, transparent 1px)
+            linear-gradient(rgba(168, 85, 247, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px)
           `,
             backgroundSize: "50px 50px",
           }}
@@ -325,7 +325,7 @@ export default function FaucetPage() {
       {/* Animated Circuit Lines */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#65ffe9] to-transparent"
+          className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"
           animate={{ x: ["-100%", "100%"] }}
           transition={{
             duration: 8,
@@ -334,7 +334,7 @@ export default function FaucetPage() {
           }}
         />
         <motion.div
-          className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#65ffe9] to-transparent"
+          className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"
           animate={{ x: ["100%", "-100%"] }}
           transition={{
             duration: 10,
@@ -343,7 +343,7 @@ export default function FaucetPage() {
           }}
         />
         <motion.div
-          className="absolute left-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-[#65ffe9] to-transparent"
+          className="absolute left-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-purple-500 to-transparent"
           animate={{ y: ["-100%", "100%"] }}
           transition={{
             duration: 12,
@@ -352,7 +352,7 @@ export default function FaucetPage() {
           }}
         />
         <motion.div
-          className="absolute right-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-[#65ffe9] to-transparent"
+          className="absolute right-1/4 top-0 w-px h-full bg-gradient-to-b from-transparent via-purple-500 to-transparent"
           animate={{ y: ["100%", "-100%"] }}
           transition={{
             duration: 9,
@@ -365,7 +365,7 @@ export default function FaucetPage() {
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
-          className="absolute top-20 left-20 w-16 h-16 border border-[#65ffe9]/30"
+          className="absolute top-20 left-20 w-16 h-16 border border-purple-500/30"
           style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
           animate={{ rotate: 360 }}
           transition={{
@@ -375,7 +375,7 @@ export default function FaucetPage() {
           }}
         />
         <motion.div
-          className="absolute top-40 right-32 w-12 h-12 border border-[#65ffe9]/20"
+          className="absolute top-40 right-32 w-12 h-12 border border-purple-500/20"
           style={{
             clipPath:
               "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
@@ -388,7 +388,7 @@ export default function FaucetPage() {
           }}
         />
         <motion.div
-          className="absolute bottom-32 left-1/3 w-20 h-20 border border-[#65ffe9]/15"
+          className="absolute bottom-32 left-1/3 w-20 h-20 border border-purple-500/15"
           style={{
             clipPath:
               "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
@@ -406,7 +406,7 @@ export default function FaucetPage() {
       <AnimatePresence>
         {tokenAddSuccess && (
           <motion.div
-            className="fixed top-8 right-8 z-50 backdrop-blur-md border bg-black/40 border-[#65ffe9]/50 text-[#65ffe9]"
+            className="fixed top-8 right-8 z-50 backdrop-blur-md border bg-black/40 border-purple-500/50 text-purple-300"
             style={{
               clipPath:
                 "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))",
@@ -417,7 +417,7 @@ export default function FaucetPage() {
           >
             <div className="p-6 pr-12 relative">
               <div className="flex items-center">
-                <FiCheckCircle className="mr-3 text-[#65ffe9]" />
+                <FiCheckCircle className="mr-3 text-purple-300" />
                 <span className="font-medium">
                   Your Dex token added to your wallet!
                 </span>
@@ -443,15 +443,15 @@ export default function FaucetPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-[#65ffe9]/20 blur-xl"></div>
+              <div className="absolute inset-0 bg-purple-500/20 blur-xl"></div>
               <div
-                className="relative bg-black/60 border border-[#65ffe9]/50 px-8 py-4 backdrop-blur-md"
+                className="relative bg-black/60 border border-purple-500/50 px-8 py-4 backdrop-blur-md"
                 style={{
                   clipPath:
                     "polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%)",
                 }}
               >
-                <span className="text-[#65ffe9] font-mono text-sm tracking-wider">
+                <span className="text-purple-300 font-mono text-sm tracking-wider">
                   BASE SEPOLIA TESTNET
                 </span>
               </div>
@@ -464,10 +464,10 @@ export default function FaucetPage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="text-[#65ffe9] relative">
+            <span className="text-purple-300 relative">
               $YOURDEX
               <motion.div
-                className="absolute -inset-2 bg-[#65ffe9]/10 blur-lg"
+                className="absolute -inset-2 bg-purple-500/10 blur-lg"
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
               />
@@ -493,21 +493,21 @@ export default function FaucetPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <div className="absolute inset-0 bg-[#65ffe9]/5 blur-2xl"></div>
+            <div className="absolute inset-0 bg-purple-500/5 blur-2xl"></div>
             <div
-              className="relative bg-black/40 border border-[#65ffe9]/50 backdrop-blur-md overflow-hidden"
+              className="relative bg-black/40 border border-purple-500/50 backdrop-blur-md overflow-hidden"
               style={{
                 clipPath:
                   "polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 40px 100%, 0 calc(100% - 40px))",
               }}
             >
               {/* Header Accent */}
-              <div className="h-2 w-full bg-gradient-to-r from-[#65ffe9] via-blue-500 to-[#65ffe9]"></div>
+              <div className="h-2 w-full bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500"></div>
 
               <div className="p-12">
                 {/* Connected Wallet Info */}
                 <div
-                  className="bg-black/60 border border-[#65ffe9]/30 p-6 backdrop-blur-md mb-8"
+                  className="bg-black/60 border border-purple-500/30 p-6 backdrop-blur-md mb-8"
                   style={{
                     clipPath:
                       "polygon(25px 0, 100% 0, calc(100% - 25px) 100%, 0 100%)",
@@ -516,11 +516,11 @@ export default function FaucetPage() {
                   <div className="flex justify-between items-center">
                     <div className="flex items-center space-x-4">
                       <div className="flex items-center space-x-2">
-                        <div className="w-3 h-3 bg-[#65ffe9] rounded-full animate-pulse"></div>
+                        <div className="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
                         <span className="text-gray-300 font-mono text-sm">
                           CONNECTED:
                         </span>
-                        <span className="text-[#65ffe9] font-mono">
+                        <span className="text-purple-300 font-mono">
                           {address?.slice(0, 6)}...{address?.slice(-4)}
                         </span>
                       </div>
@@ -534,7 +534,7 @@ export default function FaucetPage() {
                     </div>
                     <motion.button
                       onClick={addTokenToWallet}
-                      className="flex items-center space-x-2 px-4 py-2 bg-[#65ffe9]/10 hover:bg-[#65ffe9]/20 border border-[#65ffe9]/30 text-[#65ffe9] font-mono text-sm transition-all duration-200"
+                      className="flex items-center space-x-2 px-4 py-2 bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 text-purple-300 font-mono text-sm transition-all duration-200"
                       style={{
                         clipPath:
                           "polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%)",
@@ -589,7 +589,7 @@ export default function FaucetPage() {
                       </div>
                       <motion.button
                         onClick={requestEthAirdrop}
-                        className="bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/30 text-blue-400 px-6 py-3 font-mono text-sm tracking-wider"
+                        className="bg-purple-500/20 hover:bg-purple-500/30 border border-purple-500/30 text-purple-300 px-6 py-3 font-mono text-sm tracking-wider"
                         style={{
                           clipPath:
                             "polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%)",
@@ -601,7 +601,7 @@ export default function FaucetPage() {
                         {isAirdropLoading ? (
                           <span className="flex items-center">
                             <motion.div
-                              className="w-4 h-4 border-2 border-blue-400 border-t-transparent rounded-full mr-2"
+                              className="w-4 h-4 border-2 border-purple-300 border-t-transparent rounded-full mr-2"
                               animate={{ rotate: 360 }}
                               transition={{
                                 duration: 1,
@@ -621,7 +621,7 @@ export default function FaucetPage() {
                     <AnimatePresence>
                       {airdropSuccess && (
                         <motion.div
-                          className="mt-4 p-4 bg-[#65ffe9]/10 border border-[#65ffe9]/30 text-[#65ffe9] font-mono text-sm"
+                          className="mt-4 p-4 bg-purple-500/10 border border-purple-500/30 text-purple-300 font-mono text-sm"
                           style={{
                             clipPath:
                               "polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%)",
@@ -653,14 +653,14 @@ export default function FaucetPage() {
 
                 {/* Faucet Details */}
                 <div
-                  className="bg-black/60 border border-[#65ffe9]/30 p-8 backdrop-blur-md mb-8"
+                  className="bg-black/60 border border-purple-500/30 p-8 backdrop-blur-md mb-8"
                   style={{
                     clipPath:
                       "polygon(30px 0, 100% 0, calc(100% - 30px) 100%, 0 100%)",
                   }}
                 >
                   <div className="flex items-center mb-6">
-                    <BiCube className="text-[#65ffe9] mr-4 text-3xl" />
+                    <BiCube className="text-purple-300 mr-4 text-3xl" />
                     <h2 className="text-2xl font-bold text-white font-mono tracking-wider">
                       FAUCET DETAILS
                     </h2>
@@ -668,7 +668,7 @@ export default function FaucetPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div
-                      className="bg-black/40 border border-[#65ffe9]/20 p-6 text-center"
+                      className="bg-black/40 border border-purple-500/20 p-6 text-center"
                       style={{
                         clipPath:
                           "polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%)",
@@ -677,13 +677,13 @@ export default function FaucetPage() {
                       <div className="text-gray-400 font-mono text-sm mb-2">
                         CLAIM AMOUNT
                       </div>
-                      <div className="text-2xl font-bold text-[#65ffe9] font-mono">
+                      <div className="text-2xl font-bold text-purple-300 font-mono">
                         {formatEther(claimAmount || ("0" as any))}{" "}
                         <span className="text-sm">YOURDEX</span>
                       </div>
                     </div>
                     <div
-                      className="bg-black/40 border border-[#65ffe9]/20 p-6 text-center"
+                      className="bg-black/40 border border-purple-500/20 p-6 text-center"
                       style={{
                         clipPath:
                           "polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 0 100%)",
@@ -692,13 +692,13 @@ export default function FaucetPage() {
                       <div className="text-gray-400 font-mono text-sm mb-2">
                         WAITING PERIOD
                       </div>
-                      <div className="text-2xl font-bold text-[#65ffe9] font-mono">
+                      <div className="text-2xl font-bold text-purple-300 font-mono">
                         {(Number(claimInterval) / 3600).toFixed(1)}{" "}
                         <span className="text-sm">HOURS</span>
                       </div>
                     </div>
                     <div
-                      className="bg-black/40 border border-[#65ffe9]/20 p-6 text-center"
+                      className="bg-black/40 border border-purple-500/20 p-6 text-center"
                       style={{
                         clipPath:
                           "polygon(15px 0, 100% 0, 100% 100%, 0 calc(100% - 15px))",
@@ -707,7 +707,7 @@ export default function FaucetPage() {
                       <div className="text-gray-400 font-mono text-sm mb-2">
                         YOUR BALANCE
                       </div>
-                      <div className="text-2xl font-bold text-[#65ffe9] font-mono">
+                      <div className="text-2xl font-bold text-purple-300 font-mono">
                         {formatEther(tokenBalance || ("0" as any))}{" "}
                         <span className="text-sm">YOURDEX</span>
                       </div>
@@ -727,19 +727,19 @@ export default function FaucetPage() {
                         exit={{ opacity: 0, y: -10 }}
                       >
                         <div
-                          className="bg-black/60 border border-[#65ffe9]/30 p-6 backdrop-blur-md inline-block"
+                          className="bg-black/60 border border-purple-500/30 p-6 backdrop-blur-md inline-block"
                           style={{
                             clipPath:
                               "polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%)",
                           }}
                         >
                           <div className="flex items-center justify-center mb-2">
-                            <FiClock className="mr-2 text-[#65ffe9]" />
+                            <FiClock className="mr-2 text-purple-300" />
                             <span className="text-gray-400 font-mono text-sm">
                               NEXT CLAIM AVAILABLE IN:
                             </span>
                           </div>
-                          <div className="text-3xl font-mono text-[#65ffe9] font-bold">
+                          <div className="text-3xl font-mono text-purple-300 font-bold">
                             {timerText}
                           </div>
                         </div>
@@ -753,15 +753,15 @@ export default function FaucetPage() {
                         exit={{ opacity: 0, y: -10 }}
                       >
                         <div
-                          className="bg-[#65ffe9]/10 border border-[#65ffe9]/50 p-6 backdrop-blur-md inline-block"
+                          className="bg-purple-500/10 border border-purple-500/50 p-6 backdrop-blur-md inline-block"
                           style={{
                             clipPath:
                               "polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%)",
                           }}
                         >
                           <div className="flex items-center justify-center mb-2">
-                            <FiCheckCircle className="mr-2 text-[#65ffe9]" />
-                            <span className="text-[#65ffe9] font-mono text-sm">
+                            <FiCheckCircle className="mr-2 text-purple-300" />
+                            <span className="text-purple-300 font-mono text-sm">
                               READY TO CLAIM!
                             </span>
                           </div>
@@ -776,7 +776,7 @@ export default function FaucetPage() {
                   {/* Claim Button */}
                   {Number(formatEther(balance?.value || ("0" as any))) > 0 && (
                     <div className="relative group mb-6">
-                      <div className="absolute inset-0 bg-[#65ffe9]/20 blur-xl group-hover:bg-[#65ffe9]/40 transition-all duration-500"></div>
+                      <div className="absolute inset-0 bg-purple-500/20 blur-xl group-hover:bg-purple-500/40 transition-all duration-500"></div>
                       <motion.button
                         onClick={handleClaim}
                         disabled={
@@ -790,7 +790,7 @@ export default function FaucetPage() {
                           isConfirming ||
                           (timeRemaining && timeRemaining > 0)
                             ? "bg-gray-700 text-gray-400 cursor-not-allowed"
-                            : "bg-gradient-to-r from-[#65ffe9] to-blue-500 text-black hover:from-blue-500 hover:to-[#65ffe9]"
+                            : "bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-blue-500 hover:to-purple-500"
                         } transition-all duration-300`}
                         style={{
                           clipPath:
@@ -845,7 +845,7 @@ export default function FaucetPage() {
                           <span className="flex items-center justify-center">
                             CLAIM YOURDEX TOKENS
                             <motion.div
-                              className="ml-3 text-[#65ffe9]/70"
+                              className="ml-3 text-purple-300/70"
                               animate={{ scale: [1, 1.2, 1] }}
                               transition={{
                                 duration: 2,
@@ -864,7 +864,7 @@ export default function FaucetPage() {
                   <AnimatePresence>
                     {isConfirmed && (
                       <motion.div
-                        className="mb-4 p-4 bg-[#65ffe9]/10 border border-[#65ffe9]/30 text-[#65ffe9] font-mono text-sm inline-flex items-center"
+                        className="mb-4 p-4 bg-purple-500/10 border border-purple-500/30 text-purple-300 font-mono text-sm inline-flex items-center"
                         style={{
                           clipPath:
                             "polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%)",
@@ -912,7 +912,7 @@ export default function FaucetPage() {
                       href={`https://sepolia.basescan.org/tx/${hash}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-[#65ffe9] font-mono text-sm hover:underline"
+                      className="inline-flex items-center text-purple-300 font-mono text-sm hover:underline"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                     >
@@ -932,14 +932,14 @@ export default function FaucetPage() {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <div
-              className="bg-black/40 border border-[#65ffe9]/30 p-8 backdrop-blur-md"
+              className="bg-black/40 border border-purple-500/30 p-8 backdrop-blur-md"
               style={{
                 clipPath:
                   "polygon(40px 0, 100% 0, calc(100% - 40px) 100%, 0 100%)",
               }}
             >
               <div className="flex items-center mb-6">
-                <FiInfo className="text-[#65ffe9] mr-4 text-2xl" />
+                <FiInfo className="text-purple-300 mr-4 text-2xl" />
                 <h3 className="text-xl font-bold text-white font-mono tracking-wider">
                   ABOUT THIS FAUCET
                 </h3>
@@ -954,7 +954,7 @@ export default function FaucetPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="flex items-start">
                   <div
-                    className="w-2 h-2 bg-[#65ffe9] mt-2 mr-3"
+                    className="w-2 h-2 bg-purple-500 mt-2 mr-3"
                     style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
                   ></div>
                   <p className="text-gray-400 font-mono text-sm">
@@ -964,7 +964,7 @@ export default function FaucetPage() {
                 </div>
                 <div className="flex items-start">
                   <div
-                    className="w-2 h-2 bg-[#65ffe9] mt-2 mr-3"
+                    className="w-2 h-2 bg-purple-500 mt-2 mr-3"
                     style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
                   ></div>
                   <p className="text-gray-400 font-mono text-sm">
@@ -973,7 +973,7 @@ export default function FaucetPage() {
                 </div>
                 <div className="flex items-start">
                   <div
-                    className="w-2 h-2 bg-[#65ffe9] mt-2 mr-3"
+                    className="w-2 h-2 bg-purple-500 mt-2 mr-3"
                     style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
                   ></div>
                   <p className="text-gray-400 font-mono text-sm">
