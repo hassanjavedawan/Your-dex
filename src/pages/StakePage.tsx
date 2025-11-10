@@ -345,7 +345,7 @@ const StakingPage = () => {
 
   // Approve token spending
   const approveTokens = async () => {
-    if (!address || !stakeAmount) return;
+    if (!address) return;
 
     setIsApproving(true);
     setSuccess("");
@@ -450,10 +450,10 @@ const StakingPage = () => {
     }
 
     // Check if approval is needed
-    if (needsApproval) {
-      await approveTokens();
-      return;
-    }
+    // if (needsApproval) {
+    //   await approveTokens();
+    //   return;
+    // }
 
     setIsStaking(true);
     setSuccess("");
@@ -543,9 +543,9 @@ const StakingPage = () => {
   }
 
   // Show loading spinner when transactions are processing
-  if (isStaking || isUnstaking || isClaiming || isApproving || isConfirming) {
-    return <LoadingSpinner />;
-  }
+  // if (isStaking || isUnstaking || isClaiming || isApproving || isConfirming) {
+  //   return <LoadingSpinner />;
+  // }
 
   return (
     <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
@@ -873,7 +873,7 @@ const StakingPage = () => {
                     </h2>
                   </div>
 
-                  <form onSubmit={handleStake}>
+                  <form>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                       {/* Left Column - Info */}
                       <div>
@@ -1036,55 +1036,96 @@ const StakingPage = () => {
                             </p>
                           </div>
                         </div>
-
+                        {/*  */}
                         {/* Stake Button */}
-                        <div className="relative group">
-                          <div className="absolute inset-0 bg-purple-500/20  blur-xl group-hover:bg-purple-500/40 transition-all duration-500 "></div>
-                          <motion.button
-                            type="submit"
-                            disabled={isStaking}
-                            // disabled={true}
-                            className={`w-full py-6 font-bold relative overflow-hidden font-mono text-lg tracking-wider disabled:opacity-50 disabled:cursor-not-allowed ${
-                              isStaking
-                                ? "bg-gray-700 text-gray-400 cursor-not-allowed"
-                                : "bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-blue-500 hover:to-purple-500"
-                            } transition-all duration-300`}
-                            style={{
-                              clipPath:
-                                "polygon(30px 0, 100% 0, calc(100% - 30px) 100%, 0 100%)",
-                            }}
-                            whileHover={{ scale: isStaking ? 1 : 1.02 }}
-                            whileTap={{ scale: isStaking ? 1 : 0.98 }}
-                          >
-                            {isStaking ? (
-                              <span className="flex items-center justify-center">
-                                <motion.div
-                                  className="w-6 h-6 border-2 border-gray-500 border-t-white rounded-full mr-3"
-                                  animate={{ rotate: 360 }}
-                                  transition={{
-                                    duration: 1,
-                                    repeat: Number.POSITIVE_INFINITY,
-                                    ease: "linear",
-                                  }}
-                                />
-                                STAKING...
-                              </span>
-                            ) : (
-                              <span className="flex items-center justify-center relative z-10">
-                                STAKE YOURDEX
-                                <span
-                                  className="ml-4 text-sm bg-black/20 px-3 py-1 border border-purple-500/30"
-                                  style={{
-                                    clipPath:
-                                      "polygon(5px 0, 100% 0, calc(100% - 5px) 100%, 0 100%)",
-                                  }}
-                                >
-                                  {calculateAPY()} APY
+                        {needsApproval ? (
+                          <div className="relative group">
+                            <div className="absolute inset-0 bg-purple-500/20  blur-xl group-hover:bg-purple-500/40 transition-all duration-500 "></div>
+                            <motion.button
+                              onClick={approveTokens}
+                              disabled={isApproving}
+                              // disabled={true}
+                              className={`w-full py-6 font-bold relative overflow-hidden font-mono text-lg tracking-wider disabled:opacity-50 disabled:cursor-not-allowed ${
+                                isApproving
+                                  ? "bg-gray-700 text-gray-400 cursor-not-allowed"
+                                  : "bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-blue-500 hover:to-purple-500"
+                              } transition-all duration-300`}
+                              style={{
+                                clipPath:
+                                  "polygon(30px 0, 100% 0, calc(100% - 30px) 100%, 0 100%)",
+                              }}
+                              whileHover={{ scale: isApproving ? 1 : 1.02 }}
+                              whileTap={{ scale: isApproving ? 1 : 0.98 }}
+                            >
+                              {isApproving ? (
+                                <span className="flex items-center justify-center">
+                                  <motion.div
+                                    className="w-6 h-6 border-2 border-gray-500 border-t-white rounded-full mr-3"
+                                    animate={{ rotate: 360 }}
+                                    transition={{
+                                      duration: 1,
+                                      repeat: Number.POSITIVE_INFINITY,
+                                      ease: "linear",
+                                    }}
+                                  />
+                                  APPROVING...
                                 </span>
-                              </span>
-                            )}
-                          </motion.button>
-                        </div>
+                              ) : (
+                                <span className="flex items-center justify-center relative z-10">
+                                  APPROVE
+                                </span>
+                              )}
+                            </motion.button>
+                          </div>
+                        ) : (
+                          <div className="relative group">
+                            <div className="absolute inset-0 bg-purple-500/20  blur-xl group-hover:bg-purple-500/40 transition-all duration-500 "></div>
+                            <motion.button
+                              onClick={handleStake}
+                              disabled={isStaking}
+                              // disabled={true}
+                              className={`w-full py-6 font-bold relative overflow-hidden font-mono text-lg tracking-wider disabled:opacity-50 disabled:cursor-not-allowed ${
+                                isStaking
+                                  ? "bg-gray-700 text-gray-400 cursor-not-allowed"
+                                  : "bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-blue-500 hover:to-purple-500"
+                              } transition-all duration-300`}
+                              style={{
+                                clipPath:
+                                  "polygon(30px 0, 100% 0, calc(100% - 30px) 100%, 0 100%)",
+                              }}
+                              whileHover={{ scale: isStaking ? 1 : 1.02 }}
+                              whileTap={{ scale: isStaking ? 1 : 0.98 }}
+                            >
+                              {isStaking ? (
+                                <span className="flex items-center justify-center">
+                                  <motion.div
+                                    className="w-6 h-6 border-2 border-gray-500 border-t-white rounded-full mr-3"
+                                    animate={{ rotate: 360 }}
+                                    transition={{
+                                      duration: 1,
+                                      repeat: Number.POSITIVE_INFINITY,
+                                      ease: "linear",
+                                    }}
+                                  />
+                                  STAKING...
+                                </span>
+                              ) : (
+                                <span className="flex items-center justify-center relative z-10">
+                                  STAKE YOURDEX
+                                  <span
+                                    className="ml-4 text-sm bg-black/20 px-3 py-1 border border-purple-500/30"
+                                    style={{
+                                      clipPath:
+                                        "polygon(5px 0, 100% 0, calc(100% - 5px) 100%, 0 100%)",
+                                    }}
+                                  >
+                                    {calculateAPY()} APY
+                                  </span>
+                                </span>
+                              )}
+                            </motion.button>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </form>
@@ -1247,43 +1288,20 @@ const StakingPage = () => {
                             </motion.button>
 
                             <motion.button
-                              className={`py-4 px-6 font-mono text-sm tracking-wider relative overflow-hidden disabled:cursor-not-allowed  disabled:opacity-50 ${
-                                timeRemaining[index]?.totalSeconds > 0
-                                  ? "bg-gray-700/80 text-gray-400 cursor-not-allowed"
-                                  : "bg-blue-500/20 text-blue-400 hover:bg-blue-500/30"
-                              }`}
+                              className={`py-4 px-6 font-mono text-sm tracking-wider relative overflow-hidden disabled:cursor-not-allowed  disabled:opacity-50 bg-blue-500/20 text-blue-400 hover:bg-blue-500/30`}
                               style={{
                                 clipPath:
                                   "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)",
                               }}
-                              // onClick={() =>
-                              //   timeRemaining[index]?.totalSeconds === 0 &&
-                              //   handleUnstake(index)
-                              // }
-                              // disabled={
-                              //   timeRemaining[index]?.totalSeconds > 0 ||
-                              //   isUnstaking
-                              // }
-                              disabled={true}
+                              onClick={() => handleUnstake(index)}
+                              disabled={isUnstaking}
                               whileHover={{
-                                scale:
-                                  timeRemaining[index]?.totalSeconds === 0
-                                    ? 1.02
-                                    : 1,
+                                scale: 1.02,
                               }}
                             >
-                              {timeRemaining[index]?.totalSeconds > 0 ? (
-                                <span>
-                                  UNLOCK IN {timeRemaining[index]?.days}D{" "}
-                                  {timeRemaining[index]?.hours}H{" "}
-                                  {timeRemaining[index]?.minutes}M
-                                </span>
-                              ) : isUnstaking &&
-                                selectedStakeIndex === index ? (
-                                "UNSTAKING..."
-                              ) : (
-                                "UNSTAKE"
-                              )}
+                              {isUnstaking && selectedStakeIndex === index
+                                ? "UNSTAKING..."
+                                : "UNSTAKE"}
                             </motion.button>
                           </div>
                         </div>
